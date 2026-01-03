@@ -24,6 +24,7 @@ header {
 header::before {
     content: "";
     position: absolute;
+    display: inline-block;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
