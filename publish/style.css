@@ -21,6 +21,20 @@ header {
     z-index: 1000;
 }
 
+header::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-image: url("logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 header h1 {
     margin-bottom: 0.5rem;
     font-size: 2.5rem;
