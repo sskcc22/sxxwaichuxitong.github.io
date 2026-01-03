@@ -7,3 +7,14 @@ if (form) {
         return false;
     };
 }
+
+// 首页工区图片轮播
+var workGallerySlides = document.querySelectorAll('.work-gallery-slide');
+if (workGallerySlides.length > 0) {
+    var currentWorkSlide = 0;
+    setInterval(function() {
+        workGallerySlides[currentWorkSlide].classList.remove('active');
+        currentWorkSlide = (currentWorkSlide + 1) % workGallerySlides.length;
+        workGallerySlides[currentWorkSlide].classList.add('active');
+    }, 3000);
+}

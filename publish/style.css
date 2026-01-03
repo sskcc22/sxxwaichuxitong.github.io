@@ -21,23 +21,24 @@ header {
     z-index: 1000;
 }
 
-header::before {
+header h1 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+header h1::before {
     content: "";
     display: inline-block;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-right: 0.5rem;
+    width: 1.4em;
+    height: 1.4em;
     background-image: url("logo.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-}
-
-header h1 {
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 0.5rem;
-    font-size: 2.5rem;
 }
 
 nav ul {
@@ -260,6 +261,8 @@ button[type="submit"]:hover {
 .btn-secondary {
     background: #6c757d;
     margin-left: 10px;
+    padding: 6px 14px;
+    font-size: 14px;
 }
 
 .btn-secondary:hover {

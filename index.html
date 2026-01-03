@@ -47,6 +47,44 @@
         .module-item .btn:hover {
             background-color: #0056b3;
         }
+        #work-gallery {
+            margin-top: 40px;
+        }
+        .work-gallery {
+            position: relative;
+            max-width: 800px;
+            height: 450px;
+            margin: 20px auto 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-color: #f4f4f4;
+        }
+        .work-gallery-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .work-gallery-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .work-gallery-slide.active {
+            opacity: 1;
+        }
+        @media (max-width: 600px) {
+            .work-gallery {
+                height: 260px;
+            }
+            .work-gallery-slide img {
+                object-fit: contain;
+            }
+        }
     </style>
 </head>
 <body>
@@ -86,10 +124,28 @@
                 </div>
             </div>
         </section>
+        <section id="work-gallery">
+            <h2>工区图片展示</h2>
+            <div class="work-gallery">
+                <div class="work-gallery-slide active">
+                    <img src="gongqu1.jpg" alt="工区图片1">
+                </div>
+                <div class="work-gallery-slide">
+                    <img src="gongqu2.jpg" alt="工区图片2">
+                </div>
+                <div class="work-gallery-slide">
+                    <img src="gongqu3.jpg" alt="工区图片3">
+                </div>
+                <div class="work-gallery-slide">
+                    <img src="gongqu4.jpg" alt="工区图片4">
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>开发维护：韩金桥 【苏家屯下行运用车间】.保留所有权利.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
